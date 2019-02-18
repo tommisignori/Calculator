@@ -1,0 +1,47 @@
+# CALCULATOR
+# The user enter two numers (a,b) and an operator (op)
+# He obtains the result of the two numbers according to the type of operator
+
+def calculator(a,b,op):
+
+    if op == "+":
+        return "The result is " + str(a + b)
+
+    elif op == "-":
+        return "The result is " + str(a - b)
+
+    elif op == "*":
+        return "The result is " + str(a * b)
+
+    elif op == "/":
+        return "The result is " + str(a / b)
+    
+    elif op == "√":
+        return "The result is " + str(a**(1/b))
+    
+    elif op == "%":
+        return "The result is " + str((a/b)*100)
+    
+    elif op == "^":
+        return "The result is " + str(a**b)
+    
+    else:
+        return "Please enter one of these operators '+,-,*,/,√,%,^'"
+
+def calc():
+
+    a = int(input("Please enter the first number "))
+    op = input("Please enter one of these operators '+,-,*,/,√,%,^' ")
+    b = int(input("Please enter the second number "))
+    
+    print(calculator(a,b,op))
+    
+    new_operation = input("\nAnother operation? y/n ")
+
+    if new_operation[0].lower() == "y":
+        return calc()
+    
+    else:
+        print("\nThank you for having used my calculator!")
+        
+calc()
