@@ -1,4 +1,4 @@
-Calculator
+
 My first project: building my personal calculator
 
 The user enter two numers (a,b) and an operator (op)
